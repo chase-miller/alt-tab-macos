@@ -243,7 +243,7 @@ class App: AppCenterApplication, NSApplicationDelegate {
         thumbnailsPanel.display()
         guard appIsBeingUsed else { return }
         currentScreen.repositionPanel(thumbnailsPanel, .appleCentered)
-        Windows.voiceOverFocusedWindow() // at this point ThumbnailViews are assigned to the window, and ready
+        Windows.voiceOverWindow() // at this point ThumbnailViews are assigned to the window, and ready
     }
 
     private func refreshSpecificWindows(_ windowsToUpdate: [Window]?, _ currentScreen: NSScreen) -> ()? {
@@ -277,7 +277,7 @@ class App: AppCenterApplication, NSApplicationDelegate {
             Windows.refreshWhichWindowsToShowTheUser(screen)
             Windows.reorderList()
             if (!Windows.list.contains { $0.shouldShowTheUser }) { hideUi(); return }
-            Windows.setInitialFocusedWindowIndex()
+            Windows.setInitialFocusedAndHoveredWindowIndex()
             delayedDisplayScheduled += 1
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Preferences.windowDisplayDelay) { () -> () in
                 if self.delayedDisplayScheduled == 1 {
