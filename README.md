@@ -3,7 +3,7 @@
 This is a fork of @lwouis's excellent [AltTab app](https://alt-tab-macos.netlify.app/) that adds per-shortcut `previous window` bindings. See [this PR](https://github.com/lwouis/alt-tab-macos/pull/2311) for more info.
 
 ## Installation
-As of this moment I haven't uploaded any binary, largely because I don't have an apple developer certificate. I plan to make the app binary available as a download on GitHub when I do. 
+As of this moment I haven't uploaded any binaries, largely because I don't have an apple developer certificate. I plan to make the app binary available as a download on GitHub when I do. 
 
 Until then, follow [the build instructions](https://alt-tab-macos.netlify.app/contributing) to create a build for your machine:
 
